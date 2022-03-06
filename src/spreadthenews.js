@@ -31,25 +31,26 @@ https://github.com/newseverywhere/SpreadTheNews/
 function SpreadTheNews() {
 
     // News feed options
-    var FEED_RUSSIAN_BBC = "http://feeds.bbci.co.uk/russian/rss.xml";
-    var FEED_ENGLISH_BBC = "https://feeds.bbci.co.uk/news/world/europe/rss.xml";
-    var FEED_RUSSIAN_MEDUSA = "https://meduza.io/rss/news";
+    var FEED_RUSSIAN_BBC = 'http://feeds.bbci.co.uk/russian/rss.xml';
+    var FEED_ENGLISH_BBC = 'https://feeds.bbci.co.uk/news/world/europe/rss.xml';
+    var FEED_RUSSIAN_MEDUSA = 'https://meduza.io/rss/news';
 
     // Adaptable settings
-    var RSS2JSON_KEY = ''; // Your rss2json API key (if > 10k requests a day)
-    var SHOW_IMAGES_IF_AVAILABLE = true; // Show images if the feed supplies them
-    var MAX_OUTPUT = 15; // Maximum number of feed items to show
-    var FEED = FEED_RUSSIAN_MEDUSA; // Choose from feed options above or another feed of choice
+    var RSS2JSON_KEY = '';                  // Your rss2json API key (if > 10k requests a day)
+    var SHOW_IMAGES_IF_AVAILABLE = true;    // Show images if the feed supplies them
+    var MAX_OUTPUT = 15;                    // Maximum number of feed items to show
+    var FEED = FEED_RUSSIAN_MEDUSA;         // Choose from feed options above or another feed of choice
     var INTRO_TEXT = '👋 It looks like you are visiting from Russia. Access to independent news sources about the Ukraine invasion is crucial. We are part of a network making trusted news sources widely available!';
-    var SHOW_TO_ALL = false; // Set to true if you want to show the feed to all visitors (independent of browser language)
+    var SHOW_TO_ALL = false;                 // Set to true if you want to show the feed to all visitors (e.g., for testing)
 
     function getLang() {
         return (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language || navigator.userLanguage || navigator.browserLanguage || 'en';
     }
 
     var base = `
-        <style>#spreadthenews a {color: #ffd700} #explanation-banner p { text-align: center; font-style: italic; font-size: medium; max-width:900px; margin: 5px auto;} #spreadthenews-feed div { padding: 10px;}</style>
-        <div id='spreadthenews' style='width: 100%; min-height: 25vh;  background-color: #0057B7; color: white; max-height: 300px; overflow-y: scroll;'>
+        <style>#spreadthenews a {color: #ffd700} #explanation-banner p { text-align: center; font-style: italic; font-size: medium; max-width:900px; margin: 5px auto;} #spreadthenews-feed div { padding: 10px;} #spreadthenews div { margin: 0 auto;  background-color: #0057B7; color: white; border-radius: 0px;
+            } #spreadthenews {width: 100%; min-height: 25vh;  background-color: #0057B7; color: white; max-height: 300px; overflow-y: scroll; margin: 0px; border-radius: 0px; } </style>
+        <div id='spreadthenews'>
             <div id="explanation-banner"><p>`+ INTRO_TEXT + `</p></div>
             <div id='spreadthenews-feed' style="max-width:900px; margin: 0px auto;">
             </div>
