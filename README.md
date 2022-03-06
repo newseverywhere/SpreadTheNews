@@ -6,7 +6,7 @@ Russia launched a devastating war and is invading Ukraine. Ukranian cities are
 under heavy attack by the Russian military. But the Kremlin is banning any news 
 about the war to reach Russians and even criminalizing any reporting on what its 
 military is doing in Ukraine. It is even criminal to use the word "war" to describe
-its action. 
+its actions. 
 
 **It is critical that Russians have access to news about what is really happening in
 Ukraine.** One must know about the war, in order to protest and resist its instigators.  
@@ -59,7 +59,16 @@ You can select any RSS news feed of choice. The following news feed urls are pro
 - `FEED_ENGLISH_BBC`:  The English languaged BBC news feed https://www.bbc.com/news/world/europe
 - `FEED_RUSSIAN_MEDUSA`: The Russian languaged news feed of independent Russian news desk [Medusa](https://meduza.io/en) (that is currently blocked by the Russian authorities) https://meduza.io/ (default)
 
-## How does it work?
+Note: To circumvent the domain block in this general client-side vanilla JS code, the requests are not made directly to these blocked domains, but they are routed through a third party. However, it is best to make the requests through your own backend (which is less likely to get blocked in the future).
+
+## Plugins & packages
+
+Ideally, we would provide specific platform-specific plugins/apps which make the RSS feed requests in the backend. These are in the pipeline for the following frameworks:
+
+- [ ] Wordpress
+- [ ] Django 
+
+Are you interested in an app/plugin/extension for a different platform? Let us know in the [issues](https://github.com/newseverywhere/SpreadTheNews/issues).
 
 ## Contribute 🔥
 
