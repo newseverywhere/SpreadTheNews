@@ -20,6 +20,11 @@ fashion, sport, tech, ecommerce and personal websites.
 - Finally, we may reach people in Russia that are not actively searching for independent news and 
 would otherwise not encounter it (even if it was not banned).
 
+<p align="center">
+  <img width="460" height="300" src="https://github.com/newseverywhere/SpreadTheNews/blob/main/examples/ExampleGoogleMedusa.gif"><br>
+  <sub>Example with Medusa news feed included on Google</sub>
+</p>
+
 ## Usage 💻
 
 For a basic version, simply download and include the provided `src/spreadthenews.js` file on your website. This will show 
